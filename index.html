@@ -447,7 +447,9 @@
         var stopSpin = false;
         var bmId = 0;
         var rd;
+        var bonusPicked = false;
         function spinWheel() {
+            bonusPicked = true;
             if (bmId == (13 + rd)) {
                 stopSpin = true;
                 bmId = 0;
@@ -518,6 +520,7 @@
                 godMode = false;
             }
             stopSpin = false;
+            bonusPicked = false;
         }
         var speedSaved;
         var boostReady = true;
@@ -578,9 +581,13 @@
                     speedSaved = carSpeed;
                     carSpeed = 0.07
                     turbo.start();
+                    
                     setTimeout(function () {
                         carSpeed = speedSaved;
-                        godMode = false;
+                        if (!(bonusPicked && rd == 3)) {
+                            godMode = false;
+                        }
+                        
                     }, 200);
                     setTimeout(function () {
                         boostReady = true;
@@ -790,9 +797,12 @@
                         parameter: car,
                     },
                     () => {
-                        rd = randomIntFromInterval(0, 3);
-                        spinWheel();
-                        star.dispose();
+                        if(!bonusPicked)
+                        {
+                            rd = randomIntFromInterval(0, 3);
+                            spinWheel();
+                            star.dispose();
+                        }
                     },
                 ),
             );
