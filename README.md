@@ -1,8 +1,9 @@
 # Calamity Car
 
-Membres du groupe : 
-  - MOUSSA BOUDJEMAA Mehdi Djalil https://github.com/DjDjalilo
-  - MATALLAH Mouncif https://github.com/MatallahMouncif
-
-# Lien pour jouer au jeu : 
+## Link to play the game : 
 https://djdjalilo.github.io/Calamity-Car/index.html
+
+## Credits : 
+[Rocket League Theme](https://youtu.be/jrB6DLpIDaA?list=PLlMKEcjgmg-ngYdRmKYBOGM3asEoFROZm) for my Main Menu Theme song.
+
+[The Crew II Theme](https://youtu.be/ctxKwcCzlVs) for my In-game Theme song
